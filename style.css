@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 243, 245);
+}
+header{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    
+}
+
+#hour{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 80px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+#Welcome{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: large;
+    padding: 50px;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+}
+ #logo{
+    margin-right: 100px;
+ }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 100px;
+}
+
+#opi{
+    display: flex;
+    margin: 15px;
+    width: 350px;
+    height: 35px;
+    margin-bottom: 50px;
+}
+#checar{
+    color: aliceblue;
+    background-color: rgb(255, 148, 8);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: 150px;
+}
+#checar:active{
+    background-color: aqua;
+}
+#warning1{
+    display: none;
+    color: white;
+    background-color: rgb(32, 247, 12);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+ font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#warning{
+    display: none;
+    font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 247, 247);
+    background-color: red;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+
+}
+#warning2{
+    display: none;
+    font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 247, 247);
+    background-color: red;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+
+}

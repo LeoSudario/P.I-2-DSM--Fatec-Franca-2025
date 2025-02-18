@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+
+body{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login, #singUp{
+    padding: 25px;
+    
+}
+
+#loginUsername, #signupPassword, #signupUsername,#loginPassword {
+    margin-bottom: 15px;
+}
