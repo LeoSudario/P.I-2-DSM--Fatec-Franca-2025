@@ -2,17 +2,21 @@
     margin: 0;
 }
 
+<<<<<<< HEAD
 
 @font-face {
     font-family: monts;
     src: url(/PI/imagens/Montserrat/static/Montserrat-Bold.ttf);
 }
 
+=======
+>>>>>>> 8c5c3650e3ebe23177909dc09cc9e204f2d518b8
 body{
     display:flex ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     padding: 150px;
     background-image: url(imagens/1581284747397.jpg);
     background-repeat: no-repeat;
@@ -36,4 +40,15 @@ button{
     justify-content: center;
     align-items: center;
     padding: 15px;
+=======
+}
+
+#login, #singUp{
+    padding: 25px;
+    
+}
+
+#loginUsername, #signupPassword, #signupUsername,#loginPassword {
+    margin-bottom: 15px;
+>>>>>>> 8c5c3650e3ebe23177909dc09cc9e204f2d518b8
 }
