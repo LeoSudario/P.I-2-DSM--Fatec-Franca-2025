@@ -8,16 +8,16 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
-// Middleware
+
 app.use(cors());
 app.use(bodyParser.json());
 
-// Create MySQL connection
+
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root', // Change this to your MySQL username
-  password: '11111', // Change this to your MySQL password
-  database: 'user_auth' // The name of your database
+  user: 'root', 
+  password: '11111', 
+  database: 'user_auth' 
 });
 
 db.connect((err) => {
@@ -28,23 +28,21 @@ db.connect((err) => {
   console.log('Connected to MySQL database');
 });
 
-// Signup Route
 app.post('/api/signup', async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // Check if the user already exists
-    db.query('SELECT * FROM users WHERE username = ?', [username], async (err, results) => {
+        db.query('SELECT * FROM users WHERE username = ?', [username], async (err, results) => {
       if (err) throw err;
 
       if (results.length > 0) {
         return res.status(400).json({ message: 'User already exists!' });
       }
 
-      // Hash the password
+     
       const hashedPassword = await bcrypt.hash(password, 10);
 
-      // Insert new user into database
+      
       const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
       db.query(query, [username, hashedPassword], (err, result) => {
         if (err) throw err;
@@ -58,12 +56,12 @@ app.post('/api/signup', async (req, res) => {
   }
 });
 
-// Login Route
+
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // Find the user by username
+    
     db.query('SELECT * FROM users WHERE username = ?', [username], async (err, results) => {
       if (err) throw err;
 
@@ -73,14 +71,13 @@ app.post('/api/login', async (req, res) => {
 
       const user = results[0];
 
-      // Compare password with hashed password in the database
+      
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) {
         return res.status(400).json({ message: 'Incorrect password!' });
       }
 
-      // Generate JWT token
-      const token = jwt.sign({ id: user.id }, 'your_jwt_secret', { expiresIn: '1h' });
+        const token = jwt.sign({ id: user.id }, 'your_jwt_secret', { expiresIn: '1h' });
 
       res.status(200).json({ message: 'Login successful!', token });
     });
@@ -90,7 +87,6 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// Middleware to protect routes
 const protect = (req, res, next) => {
   const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
 
@@ -107,12 +103,10 @@ const protect = (req, res, next) => {
   }
 };
 
-// Protected Route Example
 app.get('/api/protected', protect, (req, res) => {
   res.status(200).json({ message: 'You are authorized!', user: req.user });
 });
 
-// Start the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
@@ -136,7 +130,7 @@ Login = () => {
   
         if (response.ok) {
           alert('Login successful!');
-          localStorage.setItem('token', data.token);  // Save JWT token
+          localStorage.setItem('token', data.token);  
           window.location.href = 'index.html'; 
         } else {
           alert(data.message);
