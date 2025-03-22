@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+}
+
+@font-face {
+    font-family: monts;
+    src: url(imagens/Montserrat/static/Montserrat-Bold.ttf);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: monts;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 136, 255);
+    height: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    
+}
+
+#hour{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 80px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+#Welcome{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: large;
+    padding: 50px;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+    color: aliceblue;
+}
+
+a:hover{
+    color: rgba(255, 148, 8, 0.795);
+}
+ #logo{
+    margin-right: 100px;
+ }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 50px auto; 
+}
+
+#opi{
+    display: flex;
+    margin: 15px;
+    width: 350px;
+    height: 35px;
+    margin-bottom: 50px;
+}
+#checar{
+    color: aliceblue;
+    font-family: monts;
+    font-size: 15px;
+    background-color: rgb(255, 148, 8);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: 150px;
+}
+#checar:hover{
+    transition: 0.4s;
+    background-color: rgba(255, 145, 0, 0.541);
+}
+#checar:active{
+    background-color: rgba(255, 145, 0, 0.541);
+}
+#warning1{
+    display: none;
+    color: white;
+    background-color: rgb(32, 247, 12);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+ font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#warning{
+    display: none;
+    font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 247, 247);
+    background-color: red;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+
+}
+#warning2, #warning{
+    display: none;
+    font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 247, 247);
+    background-color: red;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+
+}
+
+.acadfo{
+    display: none;
+}
+
+footer{
+    text-align: center;
+}
+@media (min-width: 1024px) {
+    
+    body{
+        background-image: url(imagens/1581284747397.jpg);
+        color: rgb(230, 234, 238);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; 
+        background-repeat: no-repeat; 
+        height: 100vh; 
+        font-family: monts;
+    }
+
+    
+   #logo{
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    color: rgb(248, 248, 248);
+    padding: 15px;
+    border-radius: 15px;
+   }
+
+   ul{
+    position: absolute;
+    display: flex;
+    padding: 5px;
+    top: 15px;
+    gap: 150px;
+    right: 150px;
+    font-size: 18px;
+   }
+
+   a{
+    color: aliceblue;
+   }
+
+   .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    text-align: center;
+    align-self: self-end;
+    
+    padding: 15px;
+    border-radius: 8px;
+    margin: 100px;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 600px;
+}
+
+#hour {
+    position: absolute; 
+    top: 50%; 
+    left: 400px; 
+    transform: translate(-50%, -50%); 
+    font-size: 80px;
+    padding-right: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+img{
+    width: 550px;
+}
+.acadfo img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 8px; 
+}
+
+footer{
+    color: rgb(161, 160, 160);
+    
+}
+
+#warning2, #warning{
+    position: absolute;
+    display: none;
+    font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 247, 247);
+    background-color: red;
+    left: 170px;
+    top: 400px;
+
+}
+
+#warning1{
+    font-size: large;
+    position: absolute;
+    display: none;
+    color: white;
+    background-color: rgb(32, 247, 12);
+    padding: 25px;
+    font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    top: 190px;
+    left: 190px;
+    width: 250px;
+    
+}
+
+}
