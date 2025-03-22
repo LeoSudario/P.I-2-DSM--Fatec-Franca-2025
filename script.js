@@ -47,13 +47,9 @@ document.addEventListener('DOMContentLoaded', function(){
         warning1.style.display = 'none';
         warning2.style.display = 'none';
     });
-    })
+     })
     
-<<<<<<< HEAD
-    SignUp = () => {
-=======
-    document.addEventListener('DOMContentLoaded', function() {
->>>>>>> 8c5c3650e3ebe23177909dc09cc9e204f2d518b8
+     SignUp = () => {
 
         document.getElementById('signUpForm').onsubmit = function(e) {  
             e.preventDefault();
@@ -70,41 +66,9 @@ document.addEventListener('DOMContentLoaded', function(){
             alert('Signup successful!');
             window.location.href = 'login.html'; 
         };
-<<<<<<< HEAD
-    };
+     };
        
-
-    Login = () => {
-=======
-    
-        document.getElementById('loginForm').onsubmit = function(e) {  
-            e.preventDefault();
-     
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
-    
-            const storedUser = localStorage.getItem(username);
-    
-            if (!storedUser) {
-                alert('No user found with that username!');
-                return;
-            }
-
-            const parsedUser = JSON.parse(storedUser);
-
-            if (parsedUser.password === password) {
-                alert('Login successful!');
-                localStorage.setItem('loggedInUser', username);
-                window.location.href = 'index.html';  
-                
-            } else {
-                alert('Incorrect password!');
-            }
-        };
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
->>>>>>> 8c5c3650e3ebe23177909dc09cc9e204f2d518b8
+     Login = () => {
 
         document.getElementById('loginForm').onsubmit = function(e) {  
             e.preventDefault();
@@ -131,15 +95,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 alert('Incorrect password!');
             }
         };
-<<<<<<< HEAD
-    };
-=======
-    });
-    
-   
-    
->>>>>>> 8c5c3650e3ebe23177909dc09cc9e204f2d518b8
-    
+     };
+     
     document.addEventListener('DOMContentLoaded', function() {
        
         const loggedInUser = localStorage.getItem('loggedInUser');
